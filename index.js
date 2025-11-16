@@ -4,6 +4,8 @@
 
 import {AppRegistry} from 'react-native';
 import App from './App';
-import {name as appName} from './app.json';
+// import splashSatu from './src/components/pages/splashSatu';
+import splashDua from './src/components/pages/splashDua';
+import {name as appName} from './app.json'; 
 
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, () => splashDua);
