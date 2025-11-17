@@ -9,7 +9,7 @@ import OrderDetail3 from './src/pages/OrderDetail3';
 import OrderSuccess from './src/pages/OrderSuccess';
 
 const App = () => {
-  return <OrderDetail />;
+  return <OrderSuccess />;
 };
 
 export default App;
