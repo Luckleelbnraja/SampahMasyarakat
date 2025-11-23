@@ -1,9 +1,9 @@
 import React from 'react';
-import {StyleSheet, View} from 'react-native';
+import { StyleSheet, View, Image } from 'react-native';
 
 // Import Components
 import Header from '../molecules/header/index';
-import TruckImage from '../../assets/sampah.png';
+import Button from '../atoms/button';
 
 const Homepage = () => {
   return (
@@ -13,11 +13,21 @@ const Homepage = () => {
         dateTime="Jul 15, 2021 - 11:05 AM"
       />
 
-      <TruckImage
-        source={{
-          uri: 'sampah.png', // ganti dengan gambar truck sendiri jika perlu
-        }}
+      <Image
+        source={require('../../assets/truk.png')}
+        style={styles.truckImage}
       />
+
+      {/* Button Jadwal Penjemputan */}
+      <View style={styles.buttonWrapper}>
+        <Button label="JADWAL PENJEMPUTAN" />
+      </View>
+
+      {/* Button Jenis Sampah */}
+      <View style={styles.smallButtonWrapper}>
+        <Button label="JENIS SAMPAH" />
+      </View>
+
     </View>
   );
 };
@@ -29,5 +39,21 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: '#FFFFFF',
     alignItems: 'center',
+  },
+  truckImage: {
+    width: 329,
+    height: 186,
+    marginTop: 63,
+  },
+
+  buttonWrapper: {
+    width: 325,
+    height: 150,
+    marginTop: 72,
+  },
+
+  smallButtonWrapper: {
+    width: 250,
+    marginTop: 69,
   },
 });
