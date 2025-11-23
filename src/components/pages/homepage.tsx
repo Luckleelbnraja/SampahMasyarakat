@@ -2,10 +2,10 @@ import React from 'react';
 import {StyleSheet, View} from 'react-native';
 
 // Import Components
-import Header from '../molecules/header/index.js';
+import Header from '../molecules/header/index';
 import TruckImage from '../../assets/sampah.png';
 
-const HomeScreen = () => {
+const Homepage = () => {
   return (
     <View style={styles.container}>
       <Header
@@ -22,7 +22,7 @@ const HomeScreen = () => {
   );
 };
 
-export default HomeScreen;
+export default Homepage;
 
 const styles = StyleSheet.create({
   container: {

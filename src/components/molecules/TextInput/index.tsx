@@ -14,7 +14,7 @@ export default TextInput;
 
 const styles = StyleSheet.create({
   label: {
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'Roboto',
     fontSize: 16,
     marginBottom: 10,
   },
@@ -22,7 +22,7 @@ const styles = StyleSheet.create({
     borderColor: '#020202',
     borderRadius: 8,
     borderWidth: 1,
-    fontFamily: 'Poppins-Regular',
+    fontFamily: 'Roboto',
     fontSize: 14,
     padding: 10,
   },

@@ -8,7 +8,7 @@ import {
 import { Container, Skip } from '../../components/molecules';
 import { Button, Gap } from '../../components/atoms';
 
-const SplashDua = () => {
+const SplashTiga = () => {
   return (
     <View style={styles.page}>
       <View style={styles.header}>
@@ -26,18 +26,18 @@ const SplashDua = () => {
       <View style={styles.centerContent}>
         <Container
           image={require('../../assets/truck.png')}
-          title="Pilah sampah dengan mudah"
-          subtitle="Mulai kebiasaan baik dengan memilah sampah organik dan anorganik dari rumahmu."
-          activeIndex={0}
+          title="Daur ulang dalam satu sentuhan!"
+          subtitle="Gunakan aplikasi ini untuk menemukan lokasi drop-off atau layanan penjemputan sampah daur ulang di sekitarmu."
+          activeIndex={1}
         />
       </View>
-     <Button label="NEXT" style={styles.nextButton} />
-     <Gap height={49} />
+      <Button label="NEXT" />
+      <Gap height={49} />
     </View>
   );
 };
 
-export default SplashDua;
+export default SplashTiga;
 
 const styles = StyleSheet.create({
   page: {
@@ -65,10 +65,4 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
   },
-  nextButton: {
-    marginHorizontal: 30,   // jarak kiri kanan
-    width: 'auto',           // jangan full
-    alignSelf: 'center',     // ke tengah
-    paddingHorizontal: 30
- },
 });

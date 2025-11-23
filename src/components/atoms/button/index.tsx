@@ -19,7 +19,6 @@ const styles = StyleSheet.create({
   }),
   text: textColor => ({
     textAlign: 'center',
-    fontFamily: 'Poppins-Medium',
     fontSize: 14,
     color: textColor,
   }),
