@@ -13,17 +13,11 @@ const SignIn = () => {
          style={styles.backIcon}
         />
      </TouchableOpacity>
-
-      {/* IMAGE HEADER */}
       <Image
         source={require('../../assets/truck.png')} // ganti sesuai nama assets kamu
         style={styles.headerImage}
       />
-
-      {/* TITLE */}
       <Text style={styles.title}>Sign In</Text>
-
-      {/* FORM */}
       <View style={styles.formWrapper}>
         <TextInput
           label="Email Address"
