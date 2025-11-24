@@ -41,11 +41,11 @@ const CustomHeader = ({title, onBack}: any) => (
   </View>
 );
 
-const OrderDetail = ({navigation}: any) => {
+const OrderDetail3 = ({navigation}: any) => {
   return (
     <View style={styles.page}>
       <CustomHeader
-        title="Sampah Plastik"
+        title="Sampah Organik"
         onBack={() => navigation?.goBack()}
       />
       <ScrollView contentContainerStyle={styles.container}>
@@ -69,7 +69,7 @@ const OrderDetail = ({navigation}: any) => {
   );
 };
 
-export default OrderDetail;
+export default OrderDetail3;
 
 const styles = StyleSheet.create({
   page: {flex: 1, backgroundColor: '#FFF'},
