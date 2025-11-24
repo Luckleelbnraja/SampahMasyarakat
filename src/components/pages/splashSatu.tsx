@@ -1,11 +1,17 @@
-import {Image, View, StyleSheet} from 'react-native';
-import React from 'react';
-import Logo from '../../assets/sampah.png';
+import { Image, View, StyleSheet } from 'react-native';
+import React, { useEffect } from 'react';
 
-const SplashSatu = () => {
+const SplashSatu = ({ navigation }) => {
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      navigation.replace('SplashDua'); // otomatis pindah ke SplashDua
+    }, 1000); // 1 detik
+    return () => clearTimeout(timer); // bersihkan timer kalau halaman di-unmount
+  }, [navigation]);
+
   return (
     <View style={styles.container}>
-      <Image source={Logo} style={styles.logo} />
+      <Image source={require('../../assets/sampah.png')} style={styles.logo} />
     </View>
   );
 };

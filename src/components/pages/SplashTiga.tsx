@@ -8,30 +8,35 @@ import {
 import { Container, Skip } from '../../components/molecules';
 import { Button, Gap } from '../../components/atoms';
 
-const SplashTiga = () => {
+const SplashTiga = ({ navigation }) => {
   return (
     <View style={styles.page}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             source={require('../../assets/Vector.png')}
             style={styles.backIcon}
           />
         </TouchableOpacity>
 
-        <Skip onPress={() => {}} />
+        <Skip onPress={() => navigation.replace('SignIn')} />
       </View>
 
       <Gap height={50} />
       <View style={styles.centerContent}>
         <Container
           image={require('../../assets/truck.png')}
-          title="Daur ulang dalam satu sentuhan!"
-          subtitle="Gunakan aplikasi ini untuk menemukan lokasi drop-off atau layanan penjemputan sampah daur ulang di sekitarmu."
-          activeIndex={1}
+          title="Ayo mulai kebiasaan baik"
+          subtitle="Ikuti panduan untuk memilah sampah secara rutin dan mudah."
+          activeIndex={1} // misal indikator urutan ke-2
         />
       </View>
-      <Button label="NEXT" />
+
+      <Button
+        label="NEXT"
+        style={styles.nextButton}
+        onPress={() => navigation.replace('SplashEmpat')}
+      />
       <Gap height={49} />
     </View>
   );
@@ -64,5 +69,12 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: 'center',
+  },
+
+  nextButton: {
+    marginHorizontal: 30,
+    width: 'auto',
+    alignSelf: 'center',
+    paddingHorizontal: 30,
   },
 });

@@ -8,18 +8,18 @@ import {
 import { Container, Skip } from '../../components/molecules';
 import { Button, Gap } from '../../components/atoms';
 
-const SplashTiga = () => {
+const SplashTiga = ({ navigation }) => {
   return (
     <View style={styles.page}>
       <View style={styles.header}>
-        <TouchableOpacity onPress={() => {}}>
+        <TouchableOpacity onPress={() => navigation.goBack()}>
           <Image
             source={require('../../assets/Vector.png')}
             style={styles.backIcon}
           />
         </TouchableOpacity>
 
-        <Skip onPress={() => {}} />
+        <Skip onPress={() => navigation.replace('SignIn')} />
       </View>
 
       <Gap height={50} />
@@ -31,7 +31,12 @@ const SplashTiga = () => {
           activeIndex={2}
         />
       </View>
-      <Button label="NEXT" />
+
+      <Button
+        label="NEXT"
+        onPress={() => navigation.replace('SignIn')}
+        style={styles.nextButton}
+      />
       <Gap height={49} />
     </View>
   );
@@ -64,5 +69,12 @@ const styles = StyleSheet.create({
   centerContent: {
     flex: 1,
     justifyContent: 'center',
+  },
+
+  nextButton: {
+    marginHorizontal: 30,
+    width: 'auto',
+    alignSelf: 'center',
+    paddingHorizontal: 30,
   },
 });

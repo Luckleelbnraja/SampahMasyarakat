@@ -5,7 +5,7 @@ import { StyleSheet, View, Image } from 'react-native';
 import Header from '../molecules/header/index';
 import Button from '../atoms/button';
 
-const Homepage = () => {
+const Homepage = ({ navigation }) => {
   return (
     <View style={styles.container}>
       <Header
@@ -20,14 +20,19 @@ const Homepage = () => {
 
       {/* Button Jadwal Penjemputan */}
       <View style={styles.buttonWrapper}>
-        <Button label="JADWAL PENJEMPUTAN" />
+        <Button 
+          label="JADWAL PENJEMPUTAN" 
+          onPress={() => navigation.navigate('JadwalSampah')} 
+        />
       </View>
 
       {/* Button Jenis Sampah */}
       <View style={styles.smallButtonWrapper}>
-        <Button label="JENIS SAMPAH" />
+        <Button 
+          label="JENIS SAMPAH" 
+          onPress={() => navigation.navigate('JenisSampah')} 
+        />
       </View>
-
     </View>
   );
 };
@@ -45,13 +50,11 @@ const styles = StyleSheet.create({
     height: 186,
     marginTop: 63,
   },
-
   buttonWrapper: {
     width: 325,
     height: 150,
     marginTop: 72,
   },
-
   smallButtonWrapper: {
     width: 250,
     marginTop: 69,

@@ -4,19 +4,19 @@ import TextInput from '../../components/molecules/TextInput';
 import Button from '../../components/atoms/button';
 import Gap from '../../components/atoms/gap';
 
-const SignIn = () => {
+const SignUp = ({ navigation }) => {
   return (
     <View style={styles.container}>
-     <TouchableOpacity style={styles.backButton} onPress={() => {}}>
+      <TouchableOpacity style={styles.backButton} onPress={() => navigation.goBack()}>
         <Image
-         source={require('../../assets/Vector.png')}  // ganti dengan icon kamu
-         style={styles.backIcon}
+          source={require('../../assets/Vector.png')}  // icon back
+          style={styles.backIcon}
         />
-     </TouchableOpacity>
+      </TouchableOpacity>
 
       {/* IMAGE HEADER */}
       <Image
-        source={require('../../assets/truck.png')} // ganti sesuai nama assets kamu
+        source={require('../../assets/truck.png')} 
         style={styles.headerImage}
       />
 
@@ -25,9 +25,9 @@ const SignIn = () => {
 
       {/* FORM */}
       <View style={styles.formWrapper}>
-         <TextInput
+        <TextInput
           label="Full Name"
-          placeholder="Type your email address"
+          placeholder="Type your full name"
         />
         <Gap height={16} />
 
@@ -44,20 +44,22 @@ const SignIn = () => {
         />
         <Gap height={24} />
 
-        <Button label="SIGN IN" />
+        <Button
+          label="SIGNUP"
+          onPress={() => navigation.replace('signIn')}
+        />
         <Gap height={12} />
       </View>
-
     </View>
   );
 };
 
-export default SignIn;
+export default SignUp;
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#89E989', // warna hijau background
+    backgroundColor: '#89E989',
     paddingHorizontal: 24,
   },
   backButton: {
@@ -77,7 +79,6 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginTop: 50,
   },
-
   title: {
     fontSize: 22,
     fontWeight: '600',
@@ -85,7 +86,6 @@ const styles = StyleSheet.create({
     marginTop: 20,
     color: '#020202',
   },
-
   formWrapper: {
     backgroundColor: '#FFFFFF',
     flex: 1,
